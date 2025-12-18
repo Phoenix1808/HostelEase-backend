@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const {createCom, getAllCom,CombyID, UpdateCom, DelCom} = require("../controllers/complaintController")
-const { protect, wardenOnly } = require("../middleware/authmiddleware")
+const { protect, wardenOnly } = require("../middleware/authMiddleware")
 
 //hosteler will create complaint
 router.post("/", protect ,createCom)
